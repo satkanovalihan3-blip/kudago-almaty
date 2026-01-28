@@ -18,8 +18,19 @@ export interface Place {
   working_hours: string | null;
   photos: string[];
   is_featured: boolean;
+  rating: number | null;
+  reviews_count: number;
   created_at: string;
   category?: Category;
+}
+
+export interface Review {
+  id: string;
+  place_id: string;
+  user_name: string;
+  rating: number;
+  text: string;
+  created_at: string;
 }
 
 export interface Event {
